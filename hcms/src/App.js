@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+import Request from './component/Request';
 import './App.css';
 
 function App() {
   return (
     <div>
-      
+
+		<Request /> 
+		  
     </div>
   );
 }
