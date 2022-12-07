@@ -1,7 +1,7 @@
 .bg-img {
-  background: url("../Assets/img-2.jpg");
-  background-size: cover;
+  background: url("../Assets/doctors\ and\ pills.jpg");
   background-position: center;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -9,17 +9,19 @@
   align-items: center;
 }
 .bg-content {
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(142, 141, 141);
+  background-color: rgba(158, 157, 157, 0.4);
   color: white;
   font-weight: bold;
-  border: 3px solid #f1f1f1;
+  border: 1px solid #f1f1f1;
+  border-radius: 24px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 80%;
+  width: 82%;
+  height: 70%;
   padding: 20px;
   text-align: center;
 }
@@ -37,6 +39,12 @@
 .card {
     height: 10rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.crd-img{
+  padding-top: 0.65rem;
+  align-self: center;
+  width: 6rem;
+  height: 6rem;
 }
 .read-more {
   background: #3fd2c7;
