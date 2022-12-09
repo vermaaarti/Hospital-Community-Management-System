@@ -37,11 +37,12 @@
   align-items: center;
   justify-content: center;
 }
-.card {
-    height: 10rem;
+.m-crd {
+  height: 10rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  
 }
-.crd-img{
+.crd-img {
   padding-top: 0.65rem;
   margin-left: 20px;
   width: 6rem;

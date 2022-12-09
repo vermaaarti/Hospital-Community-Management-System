@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/MainPage.css";
 import "../Styles/Request.css";
+import Slider from "../component/ResourceSlider"
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
@@ -9,6 +10,7 @@ import Col from "react-bootstrap/Col";
 import cardio from "../Assets/Cardiogram.png";
 import service from "../Assets/ser.png";
 import register from "../Assets/register.png";
+import Contact from "../Pages/Contact";
 
 const MainPage = () => {
   return (
@@ -39,7 +41,7 @@ const MainPage = () => {
         <Container>
           <Row>
             <Col>
-              <Card style={{ width: "26rem", height: "18rem" }}>
+              <Card className = "m-crd" style={{ width: "26rem", height: "18rem" }}>
                 <img class="crd-img" src={cardio} alt="card-img" />
                 <Card.Body>
                   <Card.Title>Hospitality</Card.Title>
@@ -52,7 +54,7 @@ const MainPage = () => {
               </Card>
             </Col>
             <Col>
-              <Card style={{ width: "26rem", height: "18rem" }}>
+              <Card className = "m-crd" style={{ width: "26rem", height: "18rem" }}>
                 <img src={register} class="crd-img"/>
                 <Card.Body>
                   <Card.Title></Card.Title>
@@ -66,7 +68,7 @@ const MainPage = () => {
               </Card>
             </Col>
             <Col>
-              <Card style={{ width: "26rem", height: "18rem" }}>
+              <Card className = "m-crd" style={{ width: "26rem", height: "18rem" }}>
                 <img src={service} class="crd-img" alt="card-image" />
                 <Card.Body>
                   <Card.Title>Our Services</Card.Title>
@@ -82,6 +84,8 @@ const MainPage = () => {
           </Row>
         </Container>
       </section>
+      <Slider/>
+      <Contact/>
     </>
   );
 };
