@@ -12,8 +12,8 @@ function App() {
 
     <Navbar />
     <Routes>
-    <Route to="/" element={  <MainPage/> }/>
-    <Route to="/request" element={  <Request/> }/>
+    <Route path="/" element={  <MainPage/> }/>
+    <Route path="/request" element={  <Request/> }/>
     </Routes>
    
     <Footer/>
