@@ -27,6 +27,7 @@ const Navbar = () => {
         <a href="/#">Home</a>
         <a href="/#">About</a>
         <a href="/#">Service</a>
+        <a href="/#">Contact us</a>
         <Link to='/login' >
         <button className="signup-btn">Login</button>
         <button 

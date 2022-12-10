@@ -11,7 +11,6 @@ import cardio from "../Assets/Cardiogram.png";
 import service from "../Assets/ser.png";
 import register from "../Assets/register.png";
 import Contact from "../Pages/Contact";
-import Login from "../Pages/Login";
 
 const MainPage = () => {
   return (
@@ -87,7 +86,6 @@ const MainPage = () => {
       </section>
       <Slider/>
       <Contact/>
-      <Login/>
     </>
   );
 };
