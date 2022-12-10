@@ -19,22 +19,10 @@ const MainPage = () => {
         <div className="bg-content">
           <h2>Welcome To HCMS</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+          HCMS is a centralized system connecting a community of hospitals together aiming to fulfill the emergency needs of people at critical times.
+It is useful when unfortunately the patient is in a critical condition and is in the need of blood/organs/equipment and the hospital is unable to deliver the needs,the hospital in need puts its need in the HCMS portal,it then shows the hospitals nearby having the needful things.This can throw off many mediators who take extra money and save time at the time which is so critical.
           </p>
-          <button className="read-more">Read more</button>
+          {/* <button className="read-more">Read more</button> */}
         </div>
       </section>
       <section>
@@ -57,11 +45,9 @@ const MainPage = () => {
               <Card className = "m-crd" style={{ width: "26rem", height: "18rem" }}>
                 <img src={register} class="crd-img"/>
                 <Card.Body>
-                  <Card.Title></Card.Title>
+                  <Card.Title>Registration</Card.Title>
                   <Card.Text>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad.
+                    Hospitals in need of emergency things have to register at the time of joining the portal.
                   </Card.Text>
                   <Button variant="primary">Register Here</Button>
                 </Card.Body>
@@ -73,9 +59,7 @@ const MainPage = () => {
                 <Card.Body>
                   <Card.Title>Our Services</Card.Title>
                   <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad.
+                   We help people in need by providing the emergency factors to the hospitals conncted as a community.
                   </Card.Text>
                   <Button variant="primary">Our Services</Button>
                 </Card.Body>
