@@ -6,7 +6,7 @@ const getDataFromAPI=async(url)=>{
           withCredentials: true
         }); 
         const jsonData = await rawData.json();
-        return jsonData.data;
+        return jsonData;
     }
     catch{
       return false;
