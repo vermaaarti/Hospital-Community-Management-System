@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../Styles/Navbar.css";
+// import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const navRef = useRef();
@@ -21,7 +22,8 @@ const Navbar = () => {
   window.addEventListener("scroll",changeNavBg);
 
   return (
-    <header className = {nav ? "nav-act" : "nav"}>
+    <>
+<header className = {nav ? "nav-act" : "nav"}>
       <h3>HCMS</h3>
       <nav ref={navRef}>
         <a href="/#">Home</a>
@@ -48,6 +50,9 @@ const Navbar = () => {
         <FaBars />
       </button>
     </header>
+    {/* <SearchBar/> */}
+    </>
+    
   );
 };
 

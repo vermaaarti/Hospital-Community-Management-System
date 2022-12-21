@@ -1,0 +1,55 @@
+/*
+
+#svbox {
+  width: 33.625rem;
+  position: relative;
+  display: inline-block;
+}
+
+ */
+.srch-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dropdown-basic-button{
+  background-color: white;
+  color: rgb(102, 93, 93);
+  border-color: aliceblue;
+  border: none;
+  
+}
+.srch{
+  background-color:white;
+  color: rgb(102, 93, 93);
+  width: 1.4rem;
+  height: 2.3rem;
+  border-radius: 1px;
+  border: none;
+  font-size: 2px;
+}
+#svbox > i {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.9375rem;
+  font-size: 1rem;
+  opacity: 0.5;
+}
+input[type="text"]::placeholder {
+  padding-left: 2.5rem;
+  font-size: 2rem;
+  position: relative;
+  top: 0.125rem;
+  color: rgb(151, 146, 139);
+}
+#Sbox {
+  width: 100%;
+  border: 0.0625rem solid #dfe1e5;
+  font-size: 0.8125rem;
+  padding: 0.478rem;
+  outline: none;
+}
+#svbox :hover {
+  box-shadow: 0 0.0625rem 0.375rem 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
