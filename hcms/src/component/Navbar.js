@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "../Styles/Navbar.css";
 
 const Navbar = () => {
@@ -27,11 +28,13 @@ const Navbar = () => {
         <a href="/#">About</a>
         <a href="/#">Service</a>
         <a href="/#">Contact us</a>
+        <Link to='/signup' >
         <button className="signup-btn">Signup</button>
         <button 
 					className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />
         </button>
+        </Link>
       </nav>
       <button 
 					className="nav-btn" onClick={showNavbar}>
