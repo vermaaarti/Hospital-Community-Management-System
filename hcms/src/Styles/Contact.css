@@ -25,6 +25,13 @@
     font-size: 50px;
     margin-left: 30px;
   }
+
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20% 30% 20% 30%;
+  }
+
   form {
     display: flex;
     flex-direction: column;

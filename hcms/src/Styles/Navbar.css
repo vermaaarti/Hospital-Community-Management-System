@@ -66,6 +66,9 @@ nav a {
   word-break: break-word;
   border: 0;
 }
+.nav-btn nav-close-btn{
+  padding: 0;
+}
 .signup-btn:hover {
   transform: scale(1.04);
   transition: ease-in 0.3s;
