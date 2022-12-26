@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./auth/signUp";
 import LogIn from "./auth/logIn";
 import HospitalList from "./Pages/HospitalList";
+import NotificationPage from "./Pages/NotificationPage";
 function App() {
   return (
     <div>
@@ -23,6 +24,8 @@ function App() {
         <Footer />
         <HospitalList />
       </BrowserRouter>
+      
+      <NotificationPage/>
     </div>
   );
 }

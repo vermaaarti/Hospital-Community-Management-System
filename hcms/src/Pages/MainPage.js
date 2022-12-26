@@ -16,6 +16,7 @@ import "../Styles/SearchBar.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
+
 const MainPage = () => {
   return (
     <section className="mainpage">
@@ -23,10 +24,7 @@ const MainPage = () => {
         <div className="bg-content">
           <section className="srch-box">
             <div className="drop-down">
-              <DropdownButton
-                id="dropdown-basic-button"
-                title="Category"
-              >
+              <DropdownButton id="dropdown-basic-button" title="Category">
                 <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
@@ -54,7 +52,6 @@ const MainPage = () => {
             having the needful things.This can throw off many mediators who take
             extra money and save time at the time which is so critical.
           </p>
-          {/* <button className="read-more">Read more</button> */}
         </div>
       </section>
       <section>
@@ -111,7 +108,7 @@ const MainPage = () => {
           </Row>
         </Container>
       </section>
-      <Slider />
+      <Slider/>
       <Contact />
     </section>
   );
