@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/MainPage.css";
 import "../Styles/Request.css";
 import Slider from "../component/ResourceSlider";
@@ -15,19 +15,74 @@ import { FaSearch } from "react-icons/fa";
 import "../Styles/SearchBar.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { getDataFromAPI } from "../HelperMethods/APiMethods";
+import { useNavigate } from "react-router-dom";
+import RootUrl from "../URL";
+
+
 
 
 const MainPage = () => {
+
+  const [searchData,setSearchData]= useState({category : "", query : ""});
+
+  const redirect = useNavigate();
+  
+  const handleSearch = (e) => {
+    if(e.key === "Enter"){
+    getDataFromAPI(`${RootUrl}/searchhospital/${searchData.query}`).then((res) => {
+      console.log(res);
+      const data=res.response;
+      // if(response){
+         redirect(`/searchresult/${searchData.category}/${searchData.query}`, { state : { data}});
+      // }
+      // else{
+      //   redirect("/")
+      // }
+    }).catch((err) => redirect("/"));
+  }
+    e.preventDefault();
+
+  }
+      
+  const changeHandler = (e) => {
+    e.preventDefault();
+  
+      const { name, value } = e.target;
+      console.log(name, value);
+      setSearchData((searchData) =>({
+          ...searchData,  [name]: value 
+      }));
+  }
+  const DropdownHandler =(value)=>{
+    setSearchData((searchData) =>({
+      ...searchData,  "category": value 
+  }));
+  }
+
   return (
+
     <section className="mainpage">
       <section className="bg-img">
         <div className="bg-content">
           <section className="srch-box">
             <div className="drop-down">
+<<<<<<< HEAD
               <DropdownButton id="dropdown-basic-button" title="Category">
                 <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
                 <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+=======
+              <DropdownButton
+                id="dropdown-basic-button"
+                title="Category" onSelect={DropdownHandler}
+              >
+                <Dropdown.Item eventKey="Blood" >Blood</Dropdown.Item>
+                <Dropdown.Item eventKey="Organs">Organs</Dropdown.Item>
+                <Dropdown.Item eventKey="#/action-2">Medicine</Dropdown.Item>
+                <Dropdown.Item eventKey="#/action-2">Equipments</Dropdown.Item>
+                <Dropdown.Item eventKey="#/action-3">Something else</Dropdown.Item>
+>>>>>>> 2f67d15e1c74052d11b7d778d6162d81ea4c41fc
               </DropdownButton>
             </div>
             <div className="icn">
@@ -37,7 +92,10 @@ const MainPage = () => {
               <input
                 id="Sbox"
                 type="search"
+                name="query"
                 placeholder="Search Equipments or any medical amenities"
+                value={searchData.query}
+                 onChange={changeHandler} onKeyUp={handleSearch}
               />
             </div>
           </section>
@@ -62,7 +120,7 @@ const MainPage = () => {
                 className="m-crd"
                 style={{ width: "26rem", height: "18rem" }}
               >
-                <img class="crd-img" src={cardio} alt="card-img" />
+                <img className="crd-img" src={cardio} alt="card-img" />
                 <Card.Body>
                   <Card.Title>Hospitality</Card.Title>
                   <Card.Text>
@@ -78,7 +136,7 @@ const MainPage = () => {
                 className="m-crd"
                 style={{ width: "26rem", height: "18rem" }}
               >
-                <img src={register} class="crd-img" />
+                <img src={register} className="crd" alt="hah"/>
                 <Card.Body>
                   <Card.Title>Registration</Card.Title>
                   <Card.Text>
@@ -94,7 +152,7 @@ const MainPage = () => {
                 className="m-crd"
                 style={{ width: "26rem", height: "18rem" }}
               >
-                <img src={service} class="crd-img" alt="card-image" />
+                <img src={service} className="crd-img" alt="card" />
                 <Card.Body>
                   <Card.Title>Our Services</Card.Title>
                   <Card.Text>

@@ -19,7 +19,7 @@ function SignUp() {
     const clickHandler =(e)=>{
         e.preventDefault();
         postDataToAPI(`${RootUrl}/signup`,user).then((res)=>{
-        if(res.isUserSignedUp){
+        if(res.isHospitalSignedUp){
             alert('user succesfully signed up');
              
            

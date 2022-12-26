@@ -1,30 +1,32 @@
 import React ,{useState} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { postDataToAPI } from '../HelperMethods/APiMethods';
+import { getDataFromAPI, postDataToAPI } from '../HelperMethods/APiMethods';
 import RootUrl from '../URL';
 import "../Styles/Login.css";
 
 
  function LogIn() {
-    const redirect = useNavigate();
-        let [user ,setUser] = useState({email:'' ,password:''});
+
+        const redirect = useNavigate();
+            let [user ,setUser] = useState({email:'' ,password:''});
      
-        const changeHandler =e=>{
-            const {name , value}=e.target;
-            setUser((user) =>({
-                ...user,  [name]: value 
-            }));
-    
+            const changeHandler =e=>{
+                const {name , value}=e.target;
+                    setUser((user) =>({
+                      ...user,  [name]: value 
+                 }));   
         };
     
     
         const clickHandler =(e)=>{
             e.preventDefault();
             postDataToAPI(`${RootUrl}/login`,user).then((res)=>{
-                if(res.isUserLoggedIn){
+                if(res.isHospitalLoggedIn){
                     alert('user succesfully Logged-In') 
-                     setUser ({email:'' ,password:''})
-                    redirect("/");
+                    getDataFromAPI(`${RootUrl}/gethospital/${res.id}`).then((data)=>{ 
+                    redirect(`/hospital/${res.id}`,{state : {data}})
+                    }).catch(()=>redirect("/"));
+
                 }
                 else{
                     alert('something went wrong try again');
