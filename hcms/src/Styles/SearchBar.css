@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-/*
-
-#svbox {
-  width: 33.625rem;
-  position: relative;
-  display: inline-block;
-}
-
- */
-/* 
-.drop-down{
-} */
-
-
->>>>>>> 2f67d15e1c74052d11b7d778d6162d81ea4c41fc
 .srch-box{
   display: flex;
   justify-content: center;
@@ -37,11 +20,8 @@
   width: 1.14rem;
   height: 2.3rem;
   border: none;
-<<<<<<< HEAD
-=======
   font-size: 2px;
   height: 3vw;
->>>>>>> 2f67d15e1c74052d11b7d778d6162d81ea4c41fc
 }
 
 #svbox{
@@ -60,17 +40,10 @@
 }
 #Sbox {
   width: 100%;
-<<<<<<< HEAD
-  height: 2.3rem;
-  border: none;
-  font-size: 1rem;
-  font-weight: 200;
-=======
   height: 3vw;
 
   border: 0.0625rem solid #dfe1e5;
   font-size: 0.8125rem;
->>>>>>> 2f67d15e1c74052d11b7d778d6162d81ea4c41fc
   padding: 0.478rem;
   outline: none;
   color: rgb(151, 146, 139);

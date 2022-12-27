@@ -67,12 +67,6 @@ const MainPage = () => {
         <div className="bg-content">
           <section className="srch-box">
             <div className="drop-down">
-<<<<<<< HEAD
-              <DropdownButton id="dropdown-basic-button" title="Category">
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-=======
               <DropdownButton
                 id="dropdown-basic-button"
                 title="Category" onSelect={DropdownHandler}
@@ -82,7 +76,6 @@ const MainPage = () => {
                 <Dropdown.Item eventKey="#/action-2">Medicine</Dropdown.Item>
                 <Dropdown.Item eventKey="#/action-2">Equipments</Dropdown.Item>
                 <Dropdown.Item eventKey="#/action-3">Something else</Dropdown.Item>
->>>>>>> 2f67d15e1c74052d11b7d778d6162d81ea4c41fc
               </DropdownButton>
             </div>
             <div className="icn">
@@ -136,7 +129,7 @@ const MainPage = () => {
                 className="m-crd"
                 style={{ width: "26rem", height: "18rem" }}
               >
-                <img src={register} className="crd" alt="hah"/>
+                <img src={register} className="crd-img" alt="hah"/>
                 <Card.Body>
                   <Card.Title>Registration</Card.Title>
                   <Card.Text>
