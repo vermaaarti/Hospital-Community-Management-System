@@ -8,6 +8,7 @@ import LogIn from "./auth/logIn";
 import HospitalList from "./Pages/HospitalList";
 import NotificationPage from "./Pages/NotificationPage";
 import ProfileMain from "./profile/ProfileMain";
+import OTP from "./Pages/OTP";
 function App() {
   return (
     <div>
@@ -33,6 +34,8 @@ function App() {
       </BrowserRouter>
       
       <NotificationPage/>
+      <ProfileMain/>
+      <OTP/>
     </div>
   );
 }
