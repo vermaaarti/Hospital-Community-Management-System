@@ -21,6 +21,7 @@ import RootUrl from "../URL";
 
 
 
+
 const MainPage = () => {
 
   const [searchData,setSearchData]= useState({category : "", query : ""});
@@ -102,7 +103,6 @@ const MainPage = () => {
             having the needful things.This can throw off many mediators who take
             extra money and save time at the time which is so critical.
           </p>
-          {/* <button className="read-more">Read more</button> */}
         </div>
       </section>
       <section>
@@ -129,7 +129,7 @@ const MainPage = () => {
                 className="m-crd"
                 style={{ width: "26rem", height: "18rem" }}
               >
-                <img src={register} className="crd" alt="hah"/>
+                <img src={register} className="crd-img" alt="hah"/>
                 <Card.Body>
                   <Card.Title>Registration</Card.Title>
                   <Card.Text>
@@ -159,7 +159,7 @@ const MainPage = () => {
           </Row>
         </Container>
       </section>
-      <Slider />
+      <Slider/>
       <Contact />
     </section>
   );

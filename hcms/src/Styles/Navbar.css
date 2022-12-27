@@ -22,7 +22,7 @@
   background-color: transparent;
   position: fixed;
   color: var(--textColor);
-  z-index: 4;
+  z-index: 100;
 }
 .nav h3{
   padding: 30px;

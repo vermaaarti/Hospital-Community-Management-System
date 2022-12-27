@@ -6,7 +6,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./auth/signUp";
 import LogIn from "./auth/logIn";
 import HospitalList from "./Pages/HospitalList";
+import NotificationPage from "./Pages/NotificationPage";
 import ProfileMain from "./profile/ProfileMain";
+import OTP from "./Pages/OTP";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import FormData from "./DetailsForm/FormData";
+
 function App() {
   return (
     <div>
@@ -21,7 +26,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/hospital/:hid" element={<ProfileMain/>} />
-
+          
 
           
           <Route path="/searchresult/:category/:query" element={<HospitalList/>} />
@@ -30,6 +35,11 @@ function App() {
 
         <Footer />
       </BrowserRouter>
+      
+      <NotificationPage/>
+      <ProfileMain/>
+      <OTP/>
+      <FormData />
     </div>
   );
 }
