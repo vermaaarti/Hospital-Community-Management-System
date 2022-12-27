@@ -9,9 +9,12 @@ import HospitalList from "./Pages/HospitalList";
 import NotificationPage from "./Pages/NotificationPage";
 import ProfileMain from "./profile/ProfileMain";
 import OTP from "./Pages/OTP";
+<<<<<<< HEAD
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import FormData from "./DetailsForm/FormData";
 
+=======
+>>>>>>> 65152ddfb6f6d4039dc8afcf61dd5b9df862d571
 function App() {
   return (
     <div>
@@ -39,7 +42,10 @@ function App() {
       <NotificationPage/>
       <ProfileMain/>
       <OTP/>
+<<<<<<< HEAD
       <FormData />
+=======
+>>>>>>> 65152ddfb6f6d4039dc8afcf61dd5b9df862d571
     </div>
   );
 }

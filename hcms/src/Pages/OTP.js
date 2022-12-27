@@ -17,7 +17,11 @@ const OTP = () => {
         <input className="int-otp" />
         <p>
           If you don't receive a code{" "}
+<<<<<<< HEAD
           <a className="resnd-link" href='/home'>
+=======
+          <a className="resnd-link" href="#">
+>>>>>>> 65152ddfb6f6d4039dc8afcf61dd5b9df862d571
             Resend
           </a>
         </p>
