@@ -25,7 +25,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signup/otp" element={<Otp />} />
           <Route path="/login" element={<LogIn />} />
-          <Route path="/hospital/:hid" element={<ProfileMain/>} />
+          <Route path="/hospital" element={<ProfileMain/>} />
           
 
           

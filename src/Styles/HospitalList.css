@@ -39,10 +39,21 @@
   opacity: 1;
   outline: 0 solid transparent;
   padding: 8px 18px;
-  hospital-select: none;
+  /* hospital-select: none; */
   -webkit-hospital-select: none;
   touch-action: manipulation;
   width: fit-content;
   word-break: break-word;
   border: 0;
+}
+
+.req-res-success-mes{
+   color: green;
+   margin-top: 10px;
+   font-size: 1rem;
+}
+.req-res-err-mes{
+  color: red;
+  margin-top: 10px;
+   font-size: 1rem;
 }

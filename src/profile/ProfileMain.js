@@ -1,7 +1,18 @@
 import React from 'react';
 import "../Styles/ProfileMain.css";
+import { useDispatch } from 'react-redux';
+import { changeHospitalAuth, setHospitalData } from '../ReduxCode/Reducers';
+import {  useNavigate } from 'react-router-dom';
 
 function ProfileMain() {
+
+  const dispatch = useDispatch();
+  const redirect=useNavigate();
+  const logOut = (e) => {
+    e.preventDefault();
+    dispatch(changeHospitalAuth(false));
+    redirect("/")
+  }
 
   return (
 
@@ -9,7 +20,7 @@ function ProfileMain() {
     <div className='main-profile'>
 
       <div className="profile p-3 d-flex">
-
+        <button onClick={logOut} >Logout</button>
         <div>
           <img className="img-container" src="https://s3.amazonaws.com/uchealth-wp-uploads/wp-content/uploads/sites/6/2018/01/02032200/UCHealth_Memorial_Hospital_Central_Morning.jpgeee.jpg" /></div>
         <div>
