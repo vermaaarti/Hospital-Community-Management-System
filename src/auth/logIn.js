@@ -8,22 +8,22 @@ import "../Styles/Login.css";
  function LogIn() {
 
         const redirect = useNavigate();
-            let [user ,setUser] = useState({email:'' ,password:''});
+            let [hospital ,setHospital] = useState({email:'' ,password:''});
      
             const changeHandler =e=>{
                 const {name , value}=e.target;
-                    setUser((user) =>({
-                      ...user,  [name]: value 
+                    setHospital((hospital) =>({
+                      ...hospital,  [name]: value 
                  }));   
         };
     
     
         const clickHandler =(e)=>{
             e.preventDefault();
-            postDataToAPI(`${RootUrl}/login`,user).then((res)=>{
+            postDataToAPI(`${RootUrl}/login`,hospital).then((res)=>{
                 if(res.isHospitalLoggedIn){
-                    alert('user succesfully Logged-In') 
-                    getDataFromAPI(`${RootUrl}/gethospital/${res.id}`).then((data)=>{ 
+                    alert('hospital succesfully Logged-In') 
+                    getDataFromAPI(`${RootUrl}/gethospital`).then((data)=>{ 
                     redirect(`/hospital/${res.id}`,{state : {data}})
                     }).catch(()=>redirect("/"));
 
@@ -42,8 +42,8 @@ import "../Styles/Login.css";
     
         return (
           <form className='auth-form'>
-            <label htmlFor="email" >Email : <input type="email" name='email' id='email' value={user.email} onChange={changeHandler}/>  </label><br />
-            <label htmlFor="password" > Password : <input type='password' name='password' id='password' value={user.password}  onChange={changeHandler}/> </label><br />
+            <label htmlFor="email" >Email : <input type="email" name='email' id='email' value={hospital.email} onChange={changeHandler}/>  </label><br />
+            <label htmlFor="password" > Password : <input type='password' name='password' id='password' value={hospital.password}  onChange={changeHandler}/> </label><br />
             <button type='submit' onClick={clickHandler}>Login</button>
         </form>
 

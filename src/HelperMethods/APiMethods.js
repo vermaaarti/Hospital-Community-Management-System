@@ -3,7 +3,8 @@ import axios from "axios";
 const getDataFromAPI=async(url)=>{
     try{
         const rawData=await fetch(url,{
-          withCredentials: true
+          withCredentials: true,
+          credentials:'include'
         }); 
         const jsonData = await rawData.json();
         return jsonData;

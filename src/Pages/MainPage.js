@@ -30,16 +30,7 @@ const MainPage = () => {
   
   const handleSearch = (e) => {
     if(e.key === "Enter"){
-    getDataFromAPI(`${RootUrl}/searchhospital/${searchData.query}`).then((res) => {
-      console.log(res);
-      const data=res.response;
-      // if(response){
-         redirect(`/searchresult/${searchData.category}/${searchData.query}`, { state : { data}});
-      // }
-      // else{
-      //   redirect("/")
-      // }
-    }).catch((err) => redirect("/"));
+      redirect(`/searchresult/${searchData.category}/${searchData.query}`);
   }
     e.preventDefault();
 
@@ -55,6 +46,7 @@ const MainPage = () => {
       }));
   }
   const DropdownHandler =(value)=>{
+    console.log(value);
     setSearchData((searchData) =>({
       ...searchData,  "category": value 
   }));
@@ -71,10 +63,10 @@ const MainPage = () => {
                 id="dropdown-basic-button"
                 title="Category" onSelect={DropdownHandler}
               >
-                <Dropdown.Item eventKey="Blood" >Blood</Dropdown.Item>
-                <Dropdown.Item eventKey="Organs">Organs</Dropdown.Item>
-                <Dropdown.Item eventKey="#/action-2">Medicine</Dropdown.Item>
-                <Dropdown.Item eventKey="#/action-2">Equipments</Dropdown.Item>
+                <Dropdown.Item eventKey="blood" >Blood</Dropdown.Item>
+                <Dropdown.Item eventKey="organ">Organs</Dropdown.Item>
+                <Dropdown.Item eventKey="medicine">Medicine</Dropdown.Item>
+                <Dropdown.Item eventKey="equipment">Equipments</Dropdown.Item>
                 <Dropdown.Item eventKey="#/action-3">Something else</Dropdown.Item>
               </DropdownButton>
             </div>

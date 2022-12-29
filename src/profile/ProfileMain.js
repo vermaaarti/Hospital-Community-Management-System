@@ -3,8 +3,6 @@ import "../Styles/ProfileMain.css";
 
 function ProfileMain() {
 
-
-
   return (
 
 

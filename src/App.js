@@ -8,13 +8,9 @@ import LogIn from "./auth/logIn";
 import HospitalList from "./Pages/HospitalList";
 import NotificationPage from "./Pages/NotificationPage";
 import ProfileMain from "./profile/ProfileMain";
-import OTP from "./Pages/OTP";
-<<<<<<< HEAD
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import FormData from "./DetailsForm/FormData";
+import Otp from './auth/otp';
 
-=======
->>>>>>> 65152ddfb6f6d4039dc8afcf61dd5b9df862d571
+
 function App() {
   return (
     <div>
@@ -27,6 +23,7 @@ function App() {
           <Route path="/request" element={<Request />} />
 
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup/otp" element={<Otp />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/hospital/:hid" element={<ProfileMain/>} />
           
@@ -38,14 +35,7 @@ function App() {
 
         <Footer />
       </BrowserRouter>
-      
-      <NotificationPage/>
-      <ProfileMain/>
-      <OTP/>
-<<<<<<< HEAD
-      <FormData />
-=======
->>>>>>> 65152ddfb6f6d4039dc8afcf61dd5b9df862d571
+
     </div>
   );
 }
