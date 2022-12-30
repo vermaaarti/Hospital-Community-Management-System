@@ -23,6 +23,7 @@ function Equipments({ state }) {
   return (
     <div>
       <Card.Text> {state.name}  :  {state.quantity || 0}</Card.Text>
+      <Card.Text> price {state.price || 0}</Card.Text>
       <Button className="req-btn " variant="primary" onClick={RequestToHospital} >Request</Button>
       <Card.Text ><p className={(resMes.status) ? "req-res-success-mes" : "req-res-err-mes"} >{resMes.mes}</p> </Card.Text>
     </div>

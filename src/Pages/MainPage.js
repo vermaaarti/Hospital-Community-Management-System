@@ -18,6 +18,8 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import { getDataFromAPI } from "../HelperMethods/APiMethods";
 import { useNavigate } from "react-router-dom";
 import RootUrl from "../URL";
+import About from "./About";
+import Service from "./Service";
 
 
 
@@ -103,7 +105,7 @@ const MainPage = () => {
             <Col>
               <Card
                 className="m-crd"
-                style={{ width: "26rem", height: "18rem" }}
+                style={{ width: "23rem", height: "18rem" }}
               >
                 <img className="crd-img" src={cardio} alt="card-img" />
                 <Card.Body>
@@ -119,7 +121,7 @@ const MainPage = () => {
             <Col>
               <Card
                 className="m-crd"
-                style={{ width: "26rem", height: "18rem" }}
+                style={{ width: "23rem", height: "18rem" }}
               >
                 <img src={register} className="crd-img" alt="hah"/>
                 <Card.Body>
@@ -135,7 +137,7 @@ const MainPage = () => {
             <Col>
               <Card
                 className="m-crd"
-                style={{ width: "26rem", height: "18rem" }}
+                style={{ width: "23rem", height: "18rem" }}
               >
                 <img src={service} className="crd-img" alt="card" />
                 <Card.Body>
@@ -152,6 +154,8 @@ const MainPage = () => {
         </Container>
       </section>
       <Slider/>
+      <About/>
+      <Service/>
       <Contact />
     </section>
   );

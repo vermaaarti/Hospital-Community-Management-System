@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../Styles/ProfileMain.css";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeHospitalAuth, setHospitalData } from '../ReduxCode/Reducers';
 import {  useNavigate } from 'react-router-dom';
 
@@ -8,6 +8,14 @@ function ProfileMain() {
 
   const dispatch = useDispatch();
   const redirect=useNavigate();
+  
+  const reduxState = useSelector((state) => state);
+  const auth = reduxState;
+  const data = reduxState.hospitalAuth.hospitalData.response;
+
+  console.log(auth);
+  console.log(data);
+
   const logOut = (e) => {
     e.preventDefault();
     dispatch(changeHospitalAuth(false));
@@ -15,64 +23,49 @@ function ProfileMain() {
   }
 
   return (
+    <div className="dashboard">
+    <h1 className='dashboard-h1'>Dashboard</h1>
 
-
-    <div className='main-profile'>
-
-      <div className="profile p-3 d-flex">
-        <button onClick={logOut} >Logout</button>
-        <div>
-          <img className="img-container" src="https://s3.amazonaws.com/uchealth-wp-uploads/wp-content/uploads/sites/6/2018/01/02032200/UCHealth_Memorial_Hospital_Central_Morning.jpgeee.jpg" /></div>
-        <div>
-          <h1 className="mt-4">HOSPITAL NAME</h1>
-          <h3>Raipur, INDIA</h3>
-          <p>Active/Inactive</p>
-        </div>
-      </div>
-
-
-      <h1 className="m-3 text-center">Equipments</h1>
-      <div className="div">
-        <tbody>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td ><img src="" className="img" width="30px;" height="30px;" /></td>
-            <td><h3>Ventilator</h3></td>
-            <td><h4> 10</h4></td>
-            <td><h4> 1000</h4></td>
-          </tr>
-
-        </tbody>
-      </div>
-
-
-
-      <h1 className="m-3 text-center">Medical Amenities</h1>
-      <div className="div">
-        <tbody>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td ><img src="" className="img" width="30px;" height="30px;" /></td>
-            <td><h3>Ventilator</h3></td>
-            <td><h4> 10</h4></td>
-            <td><h4> 1000</h4></td>
-          </tr>
-        </tbody>
-      </div>
-
-
-
+    <div className='card-cont'>
+        <div className='card-img'></div>
+        <h2 className='card-name moveup'>{data.name}</h2>
+        <p className='card-add moveup'><i class="fi-xnsuxm-map-marker-solid"></i>{data.Area},Chhattisgarh,India</p>
+        {/* <p className='card-contact moveup'>Contact No. : +1223388483</p> */}
+        <p className='card-emaill moveup'>email : {data.email}</p>
+        <button className='card-btn button-6 moveup'>Update Profile</button>
     </div>
+
+    <div className='list-cont'>
+        <h2 className='type-head1'>Equipments</h2>
+        <div className='li-heading'>
+            <p>S.No.</p>
+            <p>Name of Equipment</p>
+            <p>Quantity</p>
+            <p>Set Price(Rent)</p>
+        </div>
+        <div className='li'>
+            <p>1</p>
+            <p>{data.Equipments}</p>
+            <p></p>
+            <p>22000</p>
+        </div>
+        
+        <h2 className='type-head2'> Medical Ammenities</h2>
+        <div className='li-heading'>
+            <p>S.No.</p>
+            <p>Name of Ammenity</p>
+            <p>Quantity</p>
+            <p>Set Price(Fixed)</p>
+        </div>
+        <div className='li'>
+            <p>1</p>
+            <p>{data.Organs}</p>
+            <p>7</p>
+            <p>11000</p>
+        </div>
+    </div>
+</div> 
+
   )
 }
 

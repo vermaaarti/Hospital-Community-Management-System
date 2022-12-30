@@ -18,6 +18,7 @@ const HospitalList = () => {
     getDataFromAPI(`${RootUrl}/searchhospital/${searchData.category}/${searchData.query}`).then((res) => {
       if (!res.isError && res.response)
         setDataArr(res.response);
+        console.log(res.response);
     }).catch((err) => console.log(err));
 
   }, []);
@@ -37,6 +38,8 @@ const HospitalList = () => {
                     <Card.Header as="h5">{data.name}</Card.Header>
                     <Card.Body>
                       <Card.Title>Available no. of Equipments</Card.Title>
+                      <Card.Title>Name : {data.hospitalId.name}</Card.Title>
+
                       <Card.Text> City : {data.hospitalId.address.city} Area : {data.hospitalId.address.Area} landmark : {data.hospitalId.address.landmark}</Card.Text>
                       <Card.Text><Equipments state={data} /> </Card.Text>
                     </Card.Body>

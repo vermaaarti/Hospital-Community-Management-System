@@ -11,6 +11,7 @@ import ProfileMain from "./profile/ProfileMain";
 import Otp from './auth/otp';
 
 
+
 function App() {
   return (
     <div>
@@ -35,6 +36,7 @@ function App() {
 
         <Footer />
       </BrowserRouter>
+      
 
     </div>
   );
