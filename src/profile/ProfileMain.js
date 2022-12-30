@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import "../Styles/ProfileMain.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { changeHospitalAuth, setHospitalData } from '../ReduxCode/Reducers';
-import {  useNavigate } from 'react-router-dom';
-
+import {  Route, Routes, useNavigate } from 'react-router-dom';
+import FormData from '../DetailsForm/FormData';
 function ProfileMain() {
 
   const dispatch = useDispatch();
   const redirect=useNavigate();
+  const navigateToForm = () => {redirect("./DetailsForm/FormData");};
   
   const reduxState = useSelector((state) => state);
   const auth = reduxState;
@@ -32,7 +33,7 @@ function ProfileMain() {
         <p className='card-add moveup'><i class="fi-xnsuxm-map-marker-solid"></i>{data.Area},Chhattisgarh,India</p>
         {/* <p className='card-contact moveup'>Contact No. : +1223388483</p> */}
         <p className='card-emaill moveup'>email : {data.email}</p>
-        <button className='card-btn button-6 moveup'>Update Profile</button>
+    <button onClick={navigateToForm} className='card-btn button-6 moveup'>Update Profile</button>
     </div>
 
     <div className='list-cont'>
