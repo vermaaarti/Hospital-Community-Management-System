@@ -26,9 +26,10 @@ const Service = () => {
             <p>easy to scale process</p></td>
           
           </tr>
-
+      
         </tbody>
         </table>
+        <div className='text-center mt-2 p-4'><button className='btn p-3 text-center btn-outline-info'>LEARN MORE</button></div>
       </div>
 
   )
