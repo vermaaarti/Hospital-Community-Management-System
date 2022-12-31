@@ -24,6 +24,11 @@ const Footer = () => {
                   Services
                 </a>
               </li>
+              <li>
+                <a href="/#" className="footer-li-item">
+                  Our Team
+                </a>
+              </li>
             </ul>
           </div>
           <div className="footer-row">
