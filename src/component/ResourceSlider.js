@@ -20,10 +20,10 @@ const ResourceSlider = () => {
   };
   return (
     <div>
-      <h1 className="res">Resources</h1>
+     <div className="my-5"> <h1 className="res">Resources</h1></div>
       <Slider {...settings}>
         {Data.map((item) => (
-          <div className="slider-card">
+          <div className="slider-card my-2">
             <div className="card-top">
               <img src={item.image} alt={item.image} />
             </div>
