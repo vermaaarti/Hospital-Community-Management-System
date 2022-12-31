@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./auth/signUp";
 import LogIn from "./auth/logIn";
 import HospitalList from "./Pages/HospitalList";
-import NotificationPage from "./Pages/NotificationPage";
+//import NotificationPage from "./Pages/NotificationPage";
 import ProfileMain from "./profile/ProfileMain";
 import Otp from './auth/otp';
 
