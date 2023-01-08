@@ -10,7 +10,7 @@ function Equipments({ state }) {
   console.log(state);
 
   const RequestToHospital = (e) => {
-    postDataToAPI(`${RootUrl}/makerequest`, { to : state.hospitalId.email }).then((res) => {
+    postDataToAPI(`${RootUrl}/makerequest`, { to : "kunal15markam@gmail.com" }).then((res) => {
 
       if (res.isError) setResMes({ mes: "unable to request this resource", status: false })
       else setResMes({ mes: res.message, status: true });
@@ -22,8 +22,8 @@ function Equipments({ state }) {
 
   return (
     <div>
-      <Card.Text> {state.name}  :  {state.quantity || 0}</Card.Text>
-      <Card.Text> price {state.price || 0}</Card.Text>
+      <Card.Text> {state.name || ""}  :  {state.quantity || 1}</Card.Text>
+      <Card.Text> price {state.price || `15000 rs`}</Card.Text>
       <Button className="req-btn " variant="primary" onClick={RequestToHospital} >Request</Button>
       <Card.Text ><p className={(resMes.status) ? "req-res-success-mes" : "req-res-err-mes"} >{resMes.mes}</p> </Card.Text>
     </div>
