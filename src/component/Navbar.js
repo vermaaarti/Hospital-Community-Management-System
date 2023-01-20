@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 import "../Styles/Navbar.css";
 // import SearchBar from "./SearchBar";
@@ -59,7 +59,8 @@ const Navbar = () => {
                   className="nav-btn nav-close-btn" onClick={showNavbar}>
                   <FaTimes />
                 </button>
-              </Link></>
+                {/* <button  className="signup-btn">Logout</button>  */} 
+                </Link></> 
           }
         </nav>
         <button

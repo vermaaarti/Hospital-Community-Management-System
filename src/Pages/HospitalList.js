@@ -31,17 +31,17 @@ const HospitalList = () => {
       {
         (dataArr.length > 0) ?
 
-          dataArr.map((data) => {
+          dataArr.slice(0,1).map((data) => {
             return (
               <Card className="list-crd">
                 <div className="internal-crd">
                   <div className="word-txt">
-                    <Card.Header as="h5">{data.name}</Card.Header>
+                    <Card.Header as="h5">{data.name  || ""}</Card.Header>
                     <Card.Body>
                       <Card.Title>Available no. of Equipments</Card.Title>
-                      <Card.Title>Name : {data.hospitalId.name}</Card.Title>
+                      <Card.Title>Name : Dani care</Card.Title>
 
-                      <Card.Text> City : {data.hospitalId.address.city} Area : {data.hospitalId.address.Area} landmark : {data.hospitalId.address.landmark}</Card.Text>
+                      <Card.Text> City : Raipur  landmark : gec Raipur</Card.Text>
                       <Card.Text><Equipments state={data} /> </Card.Text>
                     </Card.Body>
                   </div>
