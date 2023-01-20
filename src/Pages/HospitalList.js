@@ -11,6 +11,7 @@ const HospitalList = () => {
 
   const searchData = useParams();
   const [dataArr, setDataArr] = React.useState([]);
+  console.log(dataArr);  
 
 
   React.useEffect(() => {

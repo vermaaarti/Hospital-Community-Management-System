@@ -17,7 +17,7 @@ const Navbar = () => {
   const reduxState = useSelector((state) => state);
   const auth = reduxState.hospitalAuth.value;
 
-  console.log(auth);
+  console.log("auth = ",auth);
 
   const changeNavBg = () => {
     if (window.scrollY >= 90) {

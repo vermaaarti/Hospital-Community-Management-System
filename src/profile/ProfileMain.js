@@ -31,7 +31,6 @@ function ProfileMain() {
         <div className='card-img'></div>
         <h2 className='card-name moveup'>{data.name}</h2>
         <p className='card-add moveup'><i class="fi-xnsuxm-map-marker-solid"></i>{data.Area},Chhattisgarh,India</p>
-        {/* <p className='card-contact moveup'>Contact No. : +1223388483</p> */}
         <p className='card-emaill moveup'>email : {data.email}</p>
     <button onClick={navigateToForm} className='card-btn button-6 moveup'>Update Profile</button>
     </div>
