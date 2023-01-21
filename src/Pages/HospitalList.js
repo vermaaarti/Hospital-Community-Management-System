@@ -11,7 +11,8 @@ const HospitalList = () => {
 
   const searchData = useParams();
   const [dataArr, setDataArr] = React.useState([]);
-  console.log(dataArr);  
+
+
 
 
   React.useEffect(() => {
@@ -38,11 +39,13 @@ const HospitalList = () => {
                   <div className="word-txt">
                     <Card.Header as="h5">{data.name  || ""}</Card.Header>
                     <Card.Body>
-                      <Card.Title>Available no. of Equipments</Card.Title>
-                      <Card.Title>Name : Dani care</Card.Title>
 
-                      <Card.Text> City : Raipur  landmark : gec Raipur</Card.Text>
-                      <Card.Text><Equipments state={data} /> </Card.Text>
+                    <Card.Title> Hospital Name : {data.hospitalId.name} </Card.Title>
+
+                      <Card.Text> City : {data.hospitalId.address.city}  landmark : {data.hospitalId.address.landmark}</Card.Text>
+
+                      <Equipments state={data}/>
+
                     </Card.Body>
                   </div>
                   <div className="hos-img">
@@ -52,7 +55,7 @@ const HospitalList = () => {
               </Card>
             )
 
-          }) : <></>
+          }) : <><p>Error</p></>
 
       }
 

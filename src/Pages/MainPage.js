@@ -63,7 +63,7 @@ const MainPage = () => {
             <div className="drop-down">
               <DropdownButton
                 id="dropdown-basic-button"
-                title="Category" onSelect={DropdownHandler}
+                title="Category" onSelect={DropdownHandler} 
               >
                 <Dropdown.Item eventKey="blood" >Blood</Dropdown.Item>
                 <Dropdown.Item eventKey="organ">Organs</Dropdown.Item>

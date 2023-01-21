@@ -9,6 +9,7 @@ import HospitalList from "./Pages/HospitalList";
 //import NotificationPage from "./Pages/NotificationPage";
 import ProfileMain from "./profile/ProfileMain";
 import Otp from './auth/otp';
+import DetailsForm from "./DetailsForm/DetailsForm";
 
 
 
@@ -26,7 +27,10 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signup/otp" element={<Otp />} />
           <Route path="/login" element={<LogIn />} />
+
+
           <Route path="/hospital" element={<ProfileMain/>} />
+          <Route path="/hospital/detailsform" element={<DetailsForm/>} />
           
 
           
