@@ -1,4 +1,3 @@
-import Request from "./component/Request";
 import Navbar from "./component/Navbar.js";
 import Footer from "./component/Footer.js";
 import MainPage from "./Pages/MainPage";
@@ -10,6 +9,7 @@ import HospitalList from "./Pages/HospitalList";
 import ProfileMain from "./profile/ProfileMain";
 import Otp from './auth/otp';
 import DetailsForm from "./DetailsForm/DetailsForm";
+import Requests from "./Pages/Requests";
 
 
 
@@ -18,29 +18,29 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar />
-        
+
         <Routes>
 
           <Route path="/" element={<MainPage />} />
-          <Route path="/request" element={<Request />} />
 
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signup/otp" element={<Otp />} />
           <Route path="/login" element={<LogIn />} />
 
 
-          <Route path="/hospital" element={<ProfileMain/>} />
-          <Route path="/hospital/detailsform" element={<DetailsForm/>} />
-          
+          <Route path="/hospital" element={<ProfileMain />} />
+          <Route path="/hospital/detailsform" element={<DetailsForm />} />
 
-          
-          <Route path="/searchresult/:category/:query" element={<HospitalList/>} />
+
+
+          <Route path="/searchresult/:category/:query" element={<HospitalList />} />
+          <Route path="/hospital/requests" element={<Requests />} />
 
         </Routes>
 
         <Footer />
       </BrowserRouter>
-      
+
 
     </div>
   );
